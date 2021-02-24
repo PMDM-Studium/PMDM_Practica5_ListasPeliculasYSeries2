@@ -10,7 +10,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_peliculas">Peliculas</string>
     <string name="menu_series">Series</string>
-
+    <string name="boton_volver">Volver</string>
 
     <string name="nombrePelicula1">DeadPool</string>
     <string name="directorPelicula1">Director: Tim Miller</string>

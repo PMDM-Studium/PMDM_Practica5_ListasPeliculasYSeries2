@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +23,8 @@
         android:layout_height="250dp"
         android:layout_marginBottom="10dp"
         android:scaleType="fitXY"
-        android:src="@drawable/heroes" />
+        android:src="@drawable/heroes"
+        app:srcCompat="@drawable/deadpool" />
 
     <TextView
         android:id="@+id/nombre"
@@ -22,6 +34,14 @@
         android:justificationMode="inter_word"
         android:text="Titulo"
         android:textSize="24sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:rating="3" />
 
     <TextView
         android:id="@+id/director"
@@ -41,14 +61,6 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"/>
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:numStars="5"
-        android:rating="3" />
-
     <TextView
         android:id="@+id/sinopsis"
         android:layout_width="match_parent"
@@ -58,4 +70,13 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"/>
 
+    <Button
+        android:id="@+id/botonPeliculas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="150dp"
+        android:text="@string/boton_volver" />
+</LinearLayout>
+</ScrollView>
 </LinearLayout>

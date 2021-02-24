@@ -3,24 +3,27 @@ package es.studium.listas.ui.peliculas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
 import es.studium.listas.R;
 
-public class DetallesPeliculas extends AppCompatActivity {
+public class DetallesPeliculas extends AppCompatActivity implements View.OnClickListener {
     ImageView imagen;
     TextView nombre;
     TextView director;
     TextView reparto;
     RatingBar clasificacion;
     TextView sinopsis;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detallespeliculas);
+        setContentView(R.layout.activity_detalles_peliculas);
 
         initViews();
         initValues();
@@ -51,5 +54,12 @@ public class DetallesPeliculas extends AppCompatActivity {
         reparto.setText(PeliculasFragment.listaPeliculas.get(PeliculasFragment.posicion).getRepartoPelicula());
         clasificacion.setRating(PeliculasFragment.listaPeliculas.get(PeliculasFragment.posicion).getClasificacionPelicula());
         sinopsis.setText(PeliculasFragment.listaPeliculas.get(PeliculasFragment.posicion).getSinopsisPelicula());
+        button = findViewById(R.id.botonPeliculas);
+        button.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        finish();
     }
 }
