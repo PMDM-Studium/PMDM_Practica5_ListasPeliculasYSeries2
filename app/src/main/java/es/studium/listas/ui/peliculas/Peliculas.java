@@ -7,7 +7,7 @@ public class Peliculas implements Serializable {
     private final String nombrePelicula;
     private final String directorPelicula;
     private String repartoPelicula;
-    private static float clasificacionPelicula;
+    private final float clasificacionPelicula;
     private String sinopsisPelicula;
 
 
@@ -32,7 +32,7 @@ public class Peliculas implements Serializable {
     public String getRepartoPelicula() {
         return repartoPelicula;
     }
-    public static float getClasificacionPelicula() {
+    public final float getClasificacionPelicula() {
         return clasificacionPelicula;
     }
     public String getSinopsisPelicula() {

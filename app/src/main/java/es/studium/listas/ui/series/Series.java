@@ -5,7 +5,7 @@ class Series {
     private final String nombreSerie;
     private String directorSerie;
     private String repartoSerie;
-    private static float clasificacionSerie;
+    private final float clasificacionSerie;
     private String temporadasSerie;
     private String sinopsisSerie;
 
@@ -32,7 +32,7 @@ class Series {
     public String getRepartoSerie() {
         return repartoSerie;
     }
-    public static float getClasificacionSerie() {
+    public final float getClasificacionSerie() {
         return clasificacionSerie;
     }
     public String getTemporadasSerie() {
